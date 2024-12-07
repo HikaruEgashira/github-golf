@@ -28,12 +28,12 @@ git clone https://github.com/HikaruEgashira/github-golf.git
 
 2. Install dependencies:
 ```bash
-npm install
+bun install
 ```
 
 3. Run the development server:
 ```bash
-npm run dev
+bun run dev
 ```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser.

@@ -1,6 +1,6 @@
 "use client";
 
-import { Question } from "@/lib/types";
+import type { Question } from "@/lib/types";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -35,18 +35,18 @@ export function QuestionCard({
           <p className="text-xl font-bold mt-2">{question.question}</p>
         </div>
       </div>
-      
+
       <div className="grid gap-3">
         {question.options.map((option, index) => (
           <Button
-            key={index}
+            key={option}
             variant={
               isAnswered
                 ? index === question.correctAnswer
                   ? "default"
                   : index === selectedAnswer
-                  ? "destructive"
-                  : "outline"
+                    ? "destructive"
+                    : "outline"
                 : "outline"
             }
             className={cn(

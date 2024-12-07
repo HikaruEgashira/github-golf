@@ -14,11 +14,11 @@ interface FeedbackCardProps {
   onNext: () => void;
 }
 
-export function FeedbackCard({ 
-  isCorrect, 
-  explanation, 
+export function FeedbackCard({
+  isCorrect,
+  explanation,
   explanationImage,
-  onNext 
+  onNext
 }: FeedbackCardProps) {
   if (isCorrect) {
     confetti({
@@ -45,9 +45,9 @@ export function FeedbackCard({
             {isCorrect ? "Correct!" : "Incorrect!"}
           </h3>
         </div>
-        
+
         <p className="text-muted-foreground mb-6">{explanation}</p>
-        
+
         {explanationImage && (
           <div className="mb-6">
             <div className="relative w-full h-[400px] rounded-lg overflow-hidden">

@@ -5,7 +5,6 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, XCircle } from "lucide-react";
 import confetti from 'canvas-confetti';
-import Image from "next/image";
 
 interface FeedbackCardProps {
   isCorrect: boolean;
@@ -51,12 +50,10 @@ export function FeedbackCard({
         {explanationImage && (
           <div className="mb-6">
             <div className="relative w-full h-[400px] rounded-lg overflow-hidden">
-              <Image
+              <img
                 src={explanationImage}
                 alt="Example visualization"
-                fill
-                className="object-cover"
-                priority
+                className="object-cover w-full h-full"
               />
             </div>
           </div>

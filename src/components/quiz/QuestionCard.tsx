@@ -3,7 +3,6 @@
 import type { Question } from "@/lib/types";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 interface QuestionCardProps {
@@ -23,10 +22,9 @@ export function QuestionCard({
     <Card className="w-full max-w-2xl p-6 space-y-6">
       <div className="flex items-center space-x-4">
         <div className="relative w-16 h-16 rounded-full overflow-hidden">
-          <Image
+          <img
             src={question.characterImage}
             alt={question.character}
-            fill
             className="object-cover"
           />
         </div>

@@ -1,10 +1,10 @@
 # GitHub Golf 🏌️
 
-An interactive quiz application to test and improve your Git knowledge. Built with Next.js and TypeScript, featuring smooth animations and visual feedback.
+An interactive quiz application to test and improve your Git knowledge. Built with Vite and TypeScript, featuring smooth animations and visual feedback.
 
 ## Features
 
-- 🎯 Interactive Git command quizzes
+- 🎯 Interactive GitHub Search quiz
 - ✨ Visual feedback with confetti effects for correct answers
 - 🖼️ Explanatory images for better understanding
 - 🎨 Smooth animations using Framer Motion
@@ -13,7 +13,7 @@ An interactive quiz application to test and improve your Git knowledge. Built wi
 
 ## Tech Stack
 
-- Next.js
+- Vite
 - TypeScript
 - Framer Motion
 - Canvas Confetti
@@ -41,8 +41,7 @@ bun run dev
 ## Project Structure
 
 ```
-├── app/
-│   └── globals.css      # Global styles
+├── globals.css         # Global styles
 ├── components/
 │   ├── quiz/           # Quiz-specific components
 │   └── ui/             # Reusable UI components
@@ -53,7 +52,7 @@ bun run dev
 
 ## Quiz Features
 
-- Multiple choice questions about Git commands
+- Multiple choice questions about GitHub Search
 - Immediate feedback on answers
 - Detailed explanations with visual aids
 - Progress tracking

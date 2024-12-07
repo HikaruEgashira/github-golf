@@ -3,64 +3,53 @@ import type { Question } from "./types";
 export const quizQuestions: Question[] = [
 	{
 		id: 1,
-		question: "What's the command to create a new branch in Git?",
-		character: "Branching Octocat",
+		question: "よく使われる関数はどっち？",
+		character: "Regex Search",
 		characterImage:
 			"https://images.unsplash.com/photo-1556075798-4825dfaaf498?auto=format&fit=crop&q=80&w=200&h=200",
-		options: [
-			"git branch new-branch",
-			"git checkout -b new-branch",
-			"git create branch",
-			"git new branch",
-		],
-		correctAnswer: 1,
+		options: ["/fetch([^)]*)/", "/XMLHttpRequest([^)]*)/"],
+		correctAnswer: 0,
 		explanation:
-			"git checkout -b new-branch creates and switches to a new branch in one command. It's a shorthand for git branch new-branch followed by git checkout new-branch.",
-		explanationImage:
-			"https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&q=80&w=1200",
+			"XMLHttpRequestを直接使う人は少ない。`([^)]*)`で(から)までをマッチしてる",
+		explanationImage: "./1_fetch.png,./1_xmlhttprequest.png",
 	},
 	{
 		id: 2,
-		question: "Which command shows the commit history?",
-		character: "History Octocat",
+		question: "多いPull Requestはどっち?",
+		character: "Pull Request Search",
 		characterImage:
 			"https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?auto=format&fit=crop&q=80&w=200&h=200",
-		options: ["git show", "git history", "git log", "git commits"],
-		correctAnswer: 2,
+		options: ["typo in:title", "revert in:title"],
+		correctAnswer: 0,
 		explanation:
-			"git log shows the commit history of your repository. It displays commit hashes, authors, dates, and commit messages in reverse chronological order.",
-		explanationImage:
-			"https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?auto=format&fit=crop&q=80&w=1200",
+			"僅差でtypoが多い。Revertでは画面上から作成したカオスなPRを見つけることができる。",
+		explanationImage: "./2_typo.png,./2_revert.png",
 	},
 	{
 		id: 3,
-		question: "How do you stage all changes for commit?",
-		character: "Staging Octocat",
+		question: "Apiサーバーで実装されやすい機能は?",
+		character: "path search",
 		characterImage:
 			"https://images.unsplash.com/photo-1556075798-4825dfaaf498?auto=format&fit=crop&q=80&w=200&h=200",
-		options: ["git commit -a", "git stage all", "git add .", "git stage -all"],
-		correctAnswer: 2,
+		options: [
+			"path:api path:pdf symbol:pdf",
+			"path:api path:webhook symbol:webhook",
+		],
+		correctAnswer: 1,
 		explanation:
-			"git add . stages all changes in the current directory and its subdirectories. The dot (.) represents the current directory and all its contents.",
-		explanationImage:
-			"https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&q=80&w=1200",
+			"どちらもSSRFの脆弱性を狙われやすい。pathを利用して機能を探す。",
+		explanationImage: "./3_pdf.png,./3_webhook.png",
 	},
 	{
 		id: 4,
-		question: "What's the command to push to remote?",
-		character: "Push Master Octocat",
+		question: "Usecase層の実行を表すメソッドとして人気なのは?",
+		character: "symbol search",
 		characterImage:
 			"https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?auto=format&fit=crop&q=80&w=200&h=200",
-		options: [
-			"git push origin main",
-			"git send main",
-			"git upload main",
-			"git publish main",
-		],
-		correctAnswer: 0,
+		options: ["symbol:usecase::run", "symbol:usecase::exec"],
+		correctAnswer: 1,
 		explanation:
-			"git push origin main pushes your local main branch to the remote repository named 'origin'. This is the standard way to upload your commits to a remote repository.",
-		explanationImage:
-			"https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?auto=format&fit=crop&q=80&w=1200",
+			"圧倒的大差でexecが使われる。symbolで定義を探す。::でstruct内のメソッドを探す（言語に依存）",
+		explanationImage: "./4_run.png,./4_exec.png",
 	},
 ];

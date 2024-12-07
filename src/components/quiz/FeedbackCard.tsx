@@ -1,10 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, XCircle } from "lucide-react";
+import { Card } from "@/components/ui/card";
 import confetti from 'canvas-confetti';
+import { motion } from "framer-motion";
+import { CheckCircle2, XCircle } from "lucide-react";
 
 interface FeedbackCardProps {
   isCorrect: boolean;
@@ -49,12 +49,15 @@ export function FeedbackCard({
 
         {explanationImage && (
           <div className="mb-6">
-            <div className="relative w-full h-[400px] rounded-lg overflow-hidden">
-              <img
-                src={explanationImage}
-                alt="Example visualization"
-                className="object-cover w-full h-full"
-              />
+            <div className="relative w-full rounded-lg">
+              {explanationImage.split(',').map((image) => (
+                <img
+                  key={image.trim()}
+                  src={image.trim()}
+                  alt={image.trim()}
+                  className="object-cover w-full h-full mb-4"
+                />
+              ))}
             </div>
           </div>
         )}

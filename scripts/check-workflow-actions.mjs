@@ -5,6 +5,7 @@ const workflowsDir = join(process.cwd(), ".github", "workflows");
 
 const minimumMajor = {
   "actions/deploy-pages": 5,
+  "actions/upload-pages-artifact": 5,
 };
 
 let failed = false;
